@@ -12,6 +12,13 @@
       scroll-behavior: smooth;
     }
 
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
     @media (max-width: 768px) {
       h2, h3 {
         font-size: 1.5rem;
@@ -30,6 +37,8 @@
         margin-bottom: 1rem;
       }
     }
+
+
   </style>
 </head>
 
@@ -38,13 +47,13 @@
   <header class="bg-[#0B1F3A] text-white p-4 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <h1 class="text-lg font-semibold">Lucy Wu Realty</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#playbook" class="hover:underline">Playbook</a>
-        <a href="#vipkit" class="hover:underline">VIP Kit</a>
-        <a href="#calculator" class="hover:underline">Calculator</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </nav>
+      <nav class="overflow-x-auto whitespace-nowrap scrollbar-hide md:space-x-4 text-sm flex gap-4 md:gap-0">
+  <a href="#about" class="hover:underline inline-block">About</a>
+  <a href="#playbook" class="hover:underline inline-block">Playbook</a>
+  <a href="#vipkit" class="hover:underline inline-block">VIP Kit</a>
+  <a href="#calculator" class="hover:underline inline-block">Calculator</a>
+  <a href="#contact" class="hover:underline inline-block">Contact</a>
+</nav>
     </div>
   </header>
 
